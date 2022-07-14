@@ -90,7 +90,7 @@
       
         <p>ggplot2 中的底部的标题不是title, 而是cation</p>
 <p>所以如果需要放在底部的标题的话，应该</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p + </span><br><span class="line">  labs(caption = gsub(<span class="string">&quot;chr&quot;</span>, <span class="string">&quot;&quot;</span>, chr_name)) +</span><br><span class="line">  theme(plot.caption = element_text(hjust=<span class="number">0.5</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p + </span><br><span class="line">  labs(caption = <span class="string">&quot;Caption&quot;</span>) +</span><br><span class="line">  theme(plot.caption = element_text(hjust=<span class="number">0.5</span>))</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
