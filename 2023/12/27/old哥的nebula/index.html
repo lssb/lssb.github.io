@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>old哥的nebula | NiceB don&#39;t want to ICU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="没想到这么久了我还能想起来这个东西。今天在old哥的安排下折腾一下Dyson Sphere Program的联机mod：Nebula 下面是官方wiki Setting up a development environmentDevelopment SetupRepo Setup  Fork the repository to your own Github account.  Pull git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="old哥的nebula">
+<meta property="og:url" content="https://niceb.icu/2023/12/27/old%E5%93%A5%E7%9A%84nebula/index.html">
+<meta property="og:site_name" content="富婆 饿饿 软饭 香香">
+<meta property="og:description" content="没想到这么久了我还能想起来这个东西。今天在old哥的安排下折腾一下Dyson Sphere Program的联机mod：Nebula 下面是官方wiki Setting up a development environmentDevelopment SetupRepo Setup  Fork the repository to your own Github account.  Pull git">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-12-27T02:49:15.000Z">
+<meta property="article:modified_time" content="2023-12-27T03:17:58.123Z">
+<meta property="article:author" content="NiceB">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="富婆 饿饿 软饭 香香" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">富婆 饿饿 软饭 香香</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://niceb.icu"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-old哥的nebula" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/12/27/old%E5%93%A5%E7%9A%84nebula/" class="article-date">
+  <time datetime="2023-12-27T02:49:15.000Z" itemprop="datePublished">2023-12-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      old哥的nebula
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>没想到这么久了我还能想起来这个东西。<br>今天在old哥的安排下折腾一下Dyson Sphere Program的联机mod：Nebula</p>
+<p>下面是官方<a target="_blank" rel="noopener" href="https://github.com/NebulaModTeam/nebula/wiki/Setting-up-a-development-environment">wiki</a></p>
+<h1 id="Setting-up-a-development-environment"><a href="#Setting-up-a-development-environment" class="headerlink" title="Setting up a development environment"></a>Setting up a development environment</h1><h2 id="Development-Setup"><a href="#Development-Setup" class="headerlink" title="Development Setup"></a>Development Setup</h2><h3 id="Repo-Setup"><a href="#Repo-Setup" class="headerlink" title="Repo Setup"></a>Repo Setup</h3><ol>
+<li><input checked="" disabled="" type="checkbox"> Fork the repository to your own Github account.</li>
+<li><input disabled="" type="checkbox"> Pull git repository locally (pass <code>--recursive</code> to <code>git clone</code> to init and clone submodules)<ul>
+<li><code>git clone https://github.com/lssb/nebula.git --recursive</code> 这个代码阴影不是圆角看起来好丑</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Initialize git submodule(s) by running the following command:<ul>
+<li><code>git submodule update --init --recursive</code> This command can also be used to fetch and update changes.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Nebula-setup"><a href="#Nebula-setup" class="headerlink" title="Nebula setup"></a>Nebula setup</h3><ol>
+<li><input disabled="" type="checkbox"> Get the most up-to-date version of Dyson Sphere Program from Steam.</li>
+<li><input disabled="" type="checkbox"> Install <a target="_blank" rel="noopener" href="https://github.com/BepInEx/BepInEx/releases">BepInEx</a> inside the Dyson Sphere Program Steam installation folder.<ul>
+<li>Download <code>BepInEx_x64_&lt;version&gt;.zip</code></li>
+<li>Unzip the content to <code>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\BepInEx</code></li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Run the game once to activate BepInEx (new subfolders should appears in the BepInEx folder)</li>
+<li><input disabled="" type="checkbox"> Add a <code>Nebula</code> folder inside the <code>BepInEx\Plugins</code> folder</li>
+<li><input disabled="" type="checkbox"> Load <code>Nebula.sln</code> inside Visual Studio</li>
+<li><input disabled="" type="checkbox"> Add NuGet to Visual Studio package sources.<ul>
+<li>In the toolbar open Tools -&gt; Options, then find NuGet Package Manager -&gt; Package Sources</li>
+<li>Create a new source with name NuGet and url <a target="_blank" rel="noopener" href="https://api.nuget.org/v3/index.json">https://api.nuget.org/v3/index.json</a></li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> If your game installation is not at the default location <code>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program</code> a <code>DevEnv.targets</code> file should have been generated at the root of your copy of the Nebula repo. You can change the path to your game installation location.</li>
+<li><input disabled="" type="checkbox"> Build entire solution to generate binaries.<ul>
+<li>Nebula uses Visual Studio build events to automatically copy the mod binaries to the BepInEx\Plugins\Nebula folder.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Verify-Setup"><a href="#Verify-Setup" class="headerlink" title="Verify Setup"></a>Verify Setup</h3><ol>
+<li><input disabled="" type="checkbox"> Make sure that you have built the entire solution without errors</li>
+<li><input disabled="" type="checkbox"> Start the game using <code>Steam</code></li>
+<li><input disabled="" type="checkbox"> From the game main menu, you should now see a <code>Multiplayer</code> button</li>
+</ol>
+<h3 id="How-to-run-2-game-instances-on-the-same-computer"><a href="#How-to-run-2-game-instances-on-the-same-computer" class="headerlink" title="How to run 2 game instances on the same computer"></a>How to run 2 game instances on the same computer</h3><p>There are two options for running multiple instances:</p>
+<h4 id="Remove-Single-Instance"><a href="#Remove-Single-Instance" class="headerlink" title="Remove Single Instance"></a>Remove Single Instance</h4><p>Edit <code>Dyson Sphere Program\DSPGAME_Data\boot.config</code>, removing the <code>single-instance=</code> line from the file.<br>If you would like to keep the instances’ settings separate then Sandboxie might be preferred.</p>
+<p><strong>In order to run the game from the exe you must create a <code>steam_appid.txt</code> file in the root of the game directory (next to <code>DSPGame.exe</code>) with the text <code>1366540</code></strong></p>
+<h4 id="Sandboxie"><a href="#Sandboxie" class="headerlink" title="Sandboxie"></a>Sandboxie</h4><ol>
+<li><input disabled="" type="checkbox"> Install <a target="_blank" rel="noopener" href="https://github.com/sandboxie-plus/Sandboxie/releases">Sandboxie Plus</a></li>
+<li><input disabled="" type="checkbox"> Launch Sandboxie Plus</li>
+<li><input disabled="" type="checkbox"> Right Click on <code>DefaultBox</code> and choose <code>Run -&gt; Run Program</code></li>
+<li><input disabled="" type="checkbox"> In the popup window browse to select the <code>Steam.exe</code> from your Steam installation location.</li>
+<li><input disabled="" type="checkbox"> Make sure to check the <code>Run As UAC Administrator</code> and click <code>OK</code></li>
+<li><input disabled="" type="checkbox"> Also start steam normally</li>
+<li><input disabled="" type="checkbox"> You should now have 2 Steam apps running at once.</li>
+<li><input disabled="" type="checkbox"> Start <code>Dyson Sphere Program</code> on both of them.</li>
+<li><input disabled="" type="checkbox"> You should now have 2 Dyson Sphere Program running at once.</li>
+</ol>
+<h3 id="Recommended-Tools"><a href="#Recommended-Tools" class="headerlink" title="Recommended Tools"></a>Recommended Tools</h3><p>I highly recommend you to use the very useful plugin <a target="_blank" rel="noopener" href="https://github.com/sinai-dev/UnityExplorer/">UnityExplorer</a>. Once installed, you only need to press F7 while in-game to toggle it and you will be able to inspect any Unity GameObjects, Components and it has a runtime console to run some code at runtime.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://niceb.icu/2023/12/27/old%E5%93%A5%E7%9A%84nebula/" data-id="clqn6h4y20000z40a5gaohflz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/10/shyf%E5%9C%A8NiceB%E7%9A%84%E6%94%BE%E6%98%A0%E5%AE%A4%E7%9C%8B%E8%BF%87%E7%9A%84%E7%94%B5%E5%BD%B1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">shyf在NiceB的放映室看过的电影</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">好康的</h3>
+    <div class="widget">
+<ul>
+  <li>
+    <a href="/2022/07/27/hkd1/">??????</a>
+  </li>
+  <li>
+    <a href="/2022/07/27/hkd2/">??????</a>
+  </li>
+  <li>
+    <a href="/2022/07/27/hkd3/">??????</a>
+  </li>
+</ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BusyDay/" rel="tag">BusyDay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R%E8%AF%AD%E8%A8%80/" rel="tag">R语言</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ggplot2/" rel="tag">ggplot2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%BD%E7%8E%A9/" rel="tag">好玩</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E6%83%85/" rel="tag">心情</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%83%E5%AD%97/" rel="tag">练字</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/BusyDay/" style="font-size: 10px;">BusyDay</a> <a href="/tags/R%E8%AF%AD%E8%A8%80/" style="font-size: 10px;">R语言</a> <a href="/tags/ggplot2/" style="font-size: 10px;">ggplot2</a> <a href="/tags/test/" style="font-size: 16.67px;">test</a> <a href="/tags/%E5%A5%BD%E7%8E%A9/" style="font-size: 10px;">好玩</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">工具</a> <a href="/tags/%E5%BF%83%E6%83%85/" style="font-size: 20px;">心情</a> <a href="/tags/%E7%BB%83%E5%AD%97/" style="font-size: 13.33px;">练字</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/12/27/old%E5%93%A5%E7%9A%84nebula/">old哥的nebula</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/10/shyf%E5%9C%A8NiceB%E7%9A%84%E6%94%BE%E6%98%A0%E5%AE%A4%E7%9C%8B%E8%BF%87%E7%9A%84%E7%94%B5%E5%BD%B1/">shyf在NiceB的放映室看过的电影</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/11/R%E8%AF%AD%E8%A8%80S4%E5%AF%B9%E8%B1%A1/">R语言S4对象</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/26/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E6%9E%84%E6%83%B3/">一个游戏构想</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/25/%E7%BB%8F%E5%85%B8%E9%AB%98%E7%B4%A0%E8%B4%A8%E8%A8%80%E8%AE%BA/">经典高素质言论</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 NiceB<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

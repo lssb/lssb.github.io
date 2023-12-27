@@ -67,6 +67,98 @@
         <section id="main">
   
     
+    <article id="post-old哥的nebula" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/12/27/old%E5%93%A5%E7%9A%84nebula/" class="article-date">
+  <time datetime="2023-12-27T02:49:15.000Z" itemprop="datePublished">2023-12-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/27/old%E5%93%A5%E7%9A%84nebula/">old哥的nebula</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>没想到这么久了我还能想起来这个东西。<br>今天在old哥的安排下折腾一下Dyson Sphere Program的联机mod：Nebula</p>
+<p>下面是官方<a target="_blank" rel="noopener" href="https://github.com/NebulaModTeam/nebula/wiki/Setting-up-a-development-environment">wiki</a></p>
+<h1 id="Setting-up-a-development-environment"><a href="#Setting-up-a-development-environment" class="headerlink" title="Setting up a development environment"></a>Setting up a development environment</h1><h2 id="Development-Setup"><a href="#Development-Setup" class="headerlink" title="Development Setup"></a>Development Setup</h2><h3 id="Repo-Setup"><a href="#Repo-Setup" class="headerlink" title="Repo Setup"></a>Repo Setup</h3><ol>
+<li><input checked="" disabled="" type="checkbox"> Fork the repository to your own Github account.</li>
+<li><input disabled="" type="checkbox"> Pull git repository locally (pass <code>--recursive</code> to <code>git clone</code> to init and clone submodules)<ul>
+<li><code>git clone https://github.com/lssb/nebula.git --recursive</code> 这个代码阴影不是圆角看起来好丑</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Initialize git submodule(s) by running the following command:<ul>
+<li><code>git submodule update --init --recursive</code> This command can also be used to fetch and update changes.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Nebula-setup"><a href="#Nebula-setup" class="headerlink" title="Nebula setup"></a>Nebula setup</h3><ol>
+<li><input disabled="" type="checkbox"> Get the most up-to-date version of Dyson Sphere Program from Steam.</li>
+<li><input disabled="" type="checkbox"> Install <a target="_blank" rel="noopener" href="https://github.com/BepInEx/BepInEx/releases">BepInEx</a> inside the Dyson Sphere Program Steam installation folder.<ul>
+<li>Download <code>BepInEx_x64_&lt;version&gt;.zip</code></li>
+<li>Unzip the content to <code>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program\BepInEx</code></li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Run the game once to activate BepInEx (new subfolders should appears in the BepInEx folder)</li>
+<li><input disabled="" type="checkbox"> Add a <code>Nebula</code> folder inside the <code>BepInEx\Plugins</code> folder</li>
+<li><input disabled="" type="checkbox"> Load <code>Nebula.sln</code> inside Visual Studio</li>
+<li><input disabled="" type="checkbox"> Add NuGet to Visual Studio package sources.<ul>
+<li>In the toolbar open Tools -&gt; Options, then find NuGet Package Manager -&gt; Package Sources</li>
+<li>Create a new source with name NuGet and url <a target="_blank" rel="noopener" href="https://api.nuget.org/v3/index.json">https://api.nuget.org/v3/index.json</a></li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> If your game installation is not at the default location <code>C:\Program Files (x86)\Steam\steamapps\common\Dyson Sphere Program</code> a <code>DevEnv.targets</code> file should have been generated at the root of your copy of the Nebula repo. You can change the path to your game installation location.</li>
+<li><input disabled="" type="checkbox"> Build entire solution to generate binaries.<ul>
+<li>Nebula uses Visual Studio build events to automatically copy the mod binaries to the BepInEx\Plugins\Nebula folder.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Verify-Setup"><a href="#Verify-Setup" class="headerlink" title="Verify Setup"></a>Verify Setup</h3><ol>
+<li><input disabled="" type="checkbox"> Make sure that you have built the entire solution without errors</li>
+<li><input disabled="" type="checkbox"> Start the game using <code>Steam</code></li>
+<li><input disabled="" type="checkbox"> From the game main menu, you should now see a <code>Multiplayer</code> button</li>
+</ol>
+<h3 id="How-to-run-2-game-instances-on-the-same-computer"><a href="#How-to-run-2-game-instances-on-the-same-computer" class="headerlink" title="How to run 2 game instances on the same computer"></a>How to run 2 game instances on the same computer</h3><p>There are two options for running multiple instances:</p>
+<h4 id="Remove-Single-Instance"><a href="#Remove-Single-Instance" class="headerlink" title="Remove Single Instance"></a>Remove Single Instance</h4><p>Edit <code>Dyson Sphere Program\DSPGAME_Data\boot.config</code>, removing the <code>single-instance=</code> line from the file.<br>If you would like to keep the instances’ settings separate then Sandboxie might be preferred.</p>
+<p><strong>In order to run the game from the exe you must create a <code>steam_appid.txt</code> file in the root of the game directory (next to <code>DSPGame.exe</code>) with the text <code>1366540</code></strong></p>
+<h4 id="Sandboxie"><a href="#Sandboxie" class="headerlink" title="Sandboxie"></a>Sandboxie</h4><ol>
+<li><input disabled="" type="checkbox"> Install <a target="_blank" rel="noopener" href="https://github.com/sandboxie-plus/Sandboxie/releases">Sandboxie Plus</a></li>
+<li><input disabled="" type="checkbox"> Launch Sandboxie Plus</li>
+<li><input disabled="" type="checkbox"> Right Click on <code>DefaultBox</code> and choose <code>Run -&gt; Run Program</code></li>
+<li><input disabled="" type="checkbox"> In the popup window browse to select the <code>Steam.exe</code> from your Steam installation location.</li>
+<li><input disabled="" type="checkbox"> Make sure to check the <code>Run As UAC Administrator</code> and click <code>OK</code></li>
+<li><input disabled="" type="checkbox"> Also start steam normally</li>
+<li><input disabled="" type="checkbox"> You should now have 2 Steam apps running at once.</li>
+<li><input disabled="" type="checkbox"> Start <code>Dyson Sphere Program</code> on both of them.</li>
+<li><input disabled="" type="checkbox"> You should now have 2 Dyson Sphere Program running at once.</li>
+</ol>
+<h3 id="Recommended-Tools"><a href="#Recommended-Tools" class="headerlink" title="Recommended Tools"></a>Recommended Tools</h3><p>I highly recommend you to use the very useful plugin <a target="_blank" rel="noopener" href="https://github.com/sinai-dev/UnityExplorer/">UnityExplorer</a>. Once installed, you only need to press F7 while in-game to toggle it and you will be able to inspect any Unity GameObjects, Components and it has a runtime console to run some code at runtime.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://niceb.icu/2023/12/27/old%E5%93%A5%E7%9A%84nebula/" data-id="clqn6h4y20000z40a5gaohflz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+    
+  
+    
     <article id="post-shyf在NiceB的放映室看过的电影" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2023/05/10/shyf%E5%9C%A8NiceB%E7%9A%84%E6%94%BE%E6%98%A0%E5%AE%A4%E7%9C%8B%E8%BF%87%E7%9A%84%E7%94%B5%E5%BD%B1/" class="article-date">
@@ -572,8 +664,6 @@
 
     
   
-    
-      
 
 
   <nav id="page-nav">
@@ -631,7 +721,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a></li></ul>
     </div>
   </div>
 
@@ -642,6 +732,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/12/27/old%E5%93%A5%E7%9A%84nebula/">old哥的nebula</a>
+          </li>
         
           <li>
             <a href="/2023/05/10/shyf%E5%9C%A8NiceB%E7%9A%84%E6%94%BE%E6%98%A0%E5%AE%A4%E7%9C%8B%E8%BF%87%E7%9A%84%E7%94%B5%E5%BD%B1/">shyf在NiceB的放映室看过的电影</a>
@@ -657,10 +751,6 @@
         
           <li>
             <a href="/2022/08/25/%E7%BB%8F%E5%85%B8%E9%AB%98%E7%B4%A0%E8%B4%A8%E8%A8%80%E8%AE%BA/">经典高素质言论</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/18/%E7%BC%96%E8%BE%91%E5%99%A8nodepad3%E8%AF%95%E7%94%A8/">编辑器nodepad3试用~</a>
           </li>
         
       </ul>
